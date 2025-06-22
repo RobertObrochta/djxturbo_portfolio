@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 768px and up */
+@media only screen and (min-width: 768px) {
+  /* general */
+  *:focus{
+    outline:solid rgb(125, 187, 207);
+  }
+
+  body {
+    font-family: 'Source Code Pro','Oxygen', 'Poppins', sans-serif;
+    background-color:rgb(12, 13, 27);
+    cursor: default;
+  }
+
+  h1 {
+    font-size: 250%;
+    padding-bottom: 1%;
+    color: rgb(218, 216, 216);
+  }
+
+  h2{
+    font-size: 150%;
+    color: rgb(218, 216, 216);
+  }
+
+  h3 {
+    color: rgb(218, 216, 216);
+    font-size: 105%
+    }
+
+  a {
+    font-family: 'Source Code Pro','Oxygen', 'Poppins', sans-serif;
+  }
+
+  ::selection {
+    background:  rgb(98, 132, 133); 
+  }
+
+  ::-moz-selection {
+    background:  rgb(98, 125, 133); 
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+
+  .fixed-wrapper {
+    width: 40%;
+    position: absolute;
+    top: -5vmin;
+    left: 90%;
+  }
+
+  .fixed {
+    width: 30%;
+    position: fixed;
+    /* Do not set top / left! */
+  }
+
+  .pageSpace{
+    margin-top:40%
+  }
+
+  .container {
+    max-width: 100%;
+    margin: 2% auto;
+    overflow: auto;
+    min-height: 500px;
+  }
+
+  /* Header */
+  .name {
+    color:rgb(218, 216, 216);
+    margin-left: 3%
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+  }
+
+  /* Nav */
+  .nav{
+    display: block;
+    text-align: right;
+    z-index: 999;
+    font-size:100%;
+  }
+
+  .navheader {
+    color: rgb(103, 207, 255);
+    cursor: pointer;
+    transition: all ease-in-out 150ms;
+  }
+
+  /* for mobile, make this the same color as selected. gets obfuscated */
+  .navheader:hover {
+    color: rgb(94, 108, 187);
+    opacity: 0.8;
+    transition: all ease-in-out 225ms;
+  }
+
+  .selected {
+    color:rgb(218, 216, 216);
+    cursor: pointer;
+    transition: all ease-in-out 150ms;
+  }
+
+  .selected:hover {
+    color: rgb(185, 185, 185);
+    opacity: 0.8;
+    transition: all ease-in-out 225ms;
+  }
+
+  .wrapper {
+    width: 40%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .fixed-wrapper {
+    width: 40%;
+    position: absolute;
+    top: -5vmin;
+    left: 90%;
+  }
+
+  .fixed {
+    width: 30%;
+    position: fixed;
+    /* Do not set top / left! */
+  }
+
+  /* About */
+  .about-section {
+    background-color: rgb(51, 50, 50);
+    color: rgb(218, 216, 216);
+    padding-top: 3%;
+    position: relative;
+    line-height: 230%;
+    z-index: 1;
+    height: 100vh
+  }
+
+/* Contact */
+  #Contact {
+    background: none;
+  }
+
+  .btn {
+    display: flex;
+    background:  rgb(98, 133, 98);
+    color: rgb(218, 216, 216);
+    border: none;
+    padding: 1% 2%;
+    margin-top: 7%;
+    margin-left: 2.5%;
+    border-radius: 0px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 100%;
+    font-family: inherit;
+    transition: all ease 100ms;
+    transform: scale(1.6);
+  }
+
+  .btn:active {
+    transform: scale(1.5);
+    transition: all ease 100ms;
+  }
+
+  .contact-form {
+    border: none;
+    width: 85%;
+    margin: 40% 10% 5% 2%;
+    color: rgb(218, 216, 216);
+    align-items: center;
+  }
+
+  /* Footer */
+  footer {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    gap:80%;
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 2vmin;
+    left: 46%;
+    z-index: 999;
+  }
+  
+  .twitch {
+    transition: all ease-in-out 150ms;
+    min-height: 10%;
+    transform: scale(0.08);
+  }
+
+  .youtube {
+    transition: all ease-in-out 150ms;
+    opacity:1;
+    transform: scale(1);
+    z-index: 999;
+  }
+
+  /* change scale?? */
+  .twitch:hover, .youtube:hover {
+    transition: all ease-in-out 225ms;
+    opacity: 0.15;
+  }
+}
