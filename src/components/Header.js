@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 const Header = () => {    
-    const title = ["Tadeusz Obrochta"];
+    const title = "Tadeusz Obrochta";
 
     return (
         <header className='header'>
