@@ -1,8 +1,9 @@
 
-import React from 'react';
+import React, {useContext} from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 
 function Contact() {
+  
   // get rid of useForm auth id
   const [state, handleSubmit] = useForm("xwkaepkv"); //TODO new auth id
   const styles = {
@@ -11,6 +12,8 @@ function Contact() {
     marginBottom: '25%',
     alignItems: 'center'
 };
+
+  document.body.style.filter= "10px";
 
   if (state.succeeded) {
     // create a class for this so the section above doesn't droop down
@@ -66,4 +69,4 @@ function Contact() {
   );
 }
 
-export default Contact
+export default Contact;

@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap');
 
+section{
+  --blur-level-px:0
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -53,34 +57,61 @@
       monospace;
   }
 
+  .background-image{
+    width: 100%;
+    height:100%;
+    position: fixed;
+    z-index: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
+  }
+
+  .parallax-bg-image-blur{
+    transition: 2s;
+    filter: blur(50px);
+  }
+
+  .parallax-bg-image-noblur{
+    transition: 2s;
+    filter: blur(0px);
+  }
+
+  .blurb-text{
+    position: absolute;
+    width:40%;
+    top:50%;
+    backdrop-filter: blur(50px);
+    padding: 1%;
+    margin-left: 1%;
+    border-radius: 5%;
+  }
+
   .fixed-wrapper {
     width: 40%;
     position: absolute;
     top: -5vmin;
-    left: 90%;
+    left: 145%;
   }
 
   .fixed {
-    width: 30%;
+    width: fit-content;
     position: fixed;
+    margin-right: 22%;
     /* Do not set top / left! */
   }
 
   .pageSpace{
-    margin-top:40%
+    margin-top:4%
   }
 
   .container {
-    max-width: 100%;
-    margin: 2% auto;
-    overflow: auto;
-    min-height: 500px;
+    width:100%;
+    height: 100%;
   }
 
   /* Header */
   .name {
     color:rgb(218, 216, 216);
-    margin-left: 3%
+    margin-left: 3%;
   }
 
   .header {
@@ -88,6 +119,8 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 0px;
+    z-index: 1;
+    position: relative;
   }
 
   /* Nav */
@@ -102,6 +135,7 @@
     color: rgb(103, 207, 255);
     cursor: pointer;
     transition: all ease-in-out 150ms;
+    width: fit-content;
   }
 
   /* for mobile, make this the same color as selected. gets obfuscated */
@@ -124,8 +158,8 @@
   }
 
   .wrapper {
-    width: 40%;
-    margin: 0 auto;
+    width: 100%;
+    margin-left: -2%;
     position: relative;
   }
 
@@ -155,7 +189,9 @@
 
 /* Contact */
   #Contact {
-    background: none;
+    z-index: 100;
+    position: absolute;
+    margin-top: 100%;
   }
 
   .btn {
@@ -186,6 +222,7 @@
     margin: 40% 10% 5% 2%;
     color: rgb(218, 216, 216);
     align-items: center;
+    z-index: 100;
   }
 
   /* Footer */

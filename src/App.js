@@ -1,26 +1,28 @@
 import './App.css';
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Nav from './components/Nav';
 import Blurb from './components/Blurb';
 import About from './components/About';
 import Contact from './components/Contact';
+import Background from './components/Background';
 
-class App extends Component {
-  render() {
+
+const App = () => {
 
   return (
     <div className="container">
-      <Header/>
-      <Nav/>
-      <Blurb/>
-      <About/>
-      <Contact/>
-      <Footer/>
+        <Header/>
+        <Background/>
+        <Nav/>
+        <Blurb/>
+        {/* <About/> */}
+        <Contact/>
+        <Footer/>
     </div>
   );
-  }
+
 }
 
 export default App;
