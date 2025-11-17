@@ -66,12 +66,12 @@ section{
   }
 
   .parallax-bg-image-blur{
-    transition: 2s;
+    transition: 0.5s;
     filter: blur(50px);
   }
 
   .parallax-bg-image-noblur{
-    transition: 2s;
+    transition: 1s;
     filter: blur(0px);
   }
 
