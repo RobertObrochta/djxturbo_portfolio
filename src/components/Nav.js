@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 // eslint-disable-next-line
 import { Link, animateScroll as scroll, animateScroll } from "react-scroll";
+import Hamburger from './Hamburger';
 
 const Nav = () => {
+    const [hamburgerOpen, setHamburgerOpen] =  useState(false);
     
     const home = "Home"
     const about = "About"
@@ -20,7 +22,13 @@ const Nav = () => {
             }
         
         }
-        e.target.className = classes.replace('navheader', 'navheader selected')
+        e.target.className = classes.replace('navheader', 'navheader selected');
+    }
+
+    function toggleHamburgerOpen(e) {
+        setHamburgerOpen(!hamburgerOpen);
+
+        // TODO disable and configure background
     }
 
     let navheaderclass = "navheader";
@@ -33,6 +41,12 @@ const Nav = () => {
     function scrollToBottom() {
         scroll.scrollToBottom()
     }
+
+    const burgerMeatCSS = `
+        .fixed-wrapper {
+            display: ${hamburgerOpen ? 'inline': 'none'};
+        }
+    `;
     
     return (
         <header className='nav wrapper'>
@@ -41,6 +55,12 @@ const Nav = () => {
                 <Link activeClass="active" to={about} spy={true} smooth={true} offset={0} duration={1000}><h1 className={navheaderclass ? navheaderclass : 'selected'} onClick={(e) => {toggleCurrent(e)}}>{about.toLowerCase()}</h1></Link>
                 <Link activeClass="active" spy={true} smooth={true} offset={0} duration={1000}><h1 className={navheaderclass ? navheaderclass : 'selected'} onClick={(e) => {toggleCurrent(e); scrollToBottom();}}>{contact.toLowerCase()}</h1></Link>
             </div>
+
+            <div onClick={(e) => {toggleHamburgerOpen(e);}}>
+                <Hamburger isOpen={hamburgerOpen}/>
+            </div>
+
+            <style>{burgerMeatCSS}</style>
         </header>
     )
 }
