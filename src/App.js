@@ -16,9 +16,11 @@ const App = () => {
         <Header/>
         <Background/>
         <Nav/>
-        <Blurb/>
-        {/* <About/> */}
-        <Contact/>
+        <div className="griddy">
+          <Blurb/>
+          <About/>
+          <Contact/>
+        </div>
         <Footer/>
     </div>
   );

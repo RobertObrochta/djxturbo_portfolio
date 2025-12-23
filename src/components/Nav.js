@@ -29,19 +29,17 @@ const Nav = () => {
     function scrollToTop() {
         scroll.scrollToTop();
     }
-    /*
+    
     function scrollToBottom() {
         scroll.scrollToBottom()
     }
-    */
+    
     return (
         <header className='nav wrapper'>
             <div className='fixed-wrapper'>
-                <div className='fixed'>
-                    <h1 className='selected navheader' id={home} onClick={(e) => {toggleCurrent(e); scrollToTop();}}>{home}</h1>
-                    {/* <Link activeClass="active" to={about} spy={true} smooth={true} offset={0} duration={1000}><h1 className={navheaderclass ? navheaderclass : 'selected'} onClick={(e) => {toggleCurrent(e)}}>{about}</h1></Link> */}
-                    <Link activeClass="active" to={contact} spy={true} smooth={true} offset={0} duration={1000}><h1 className={navheaderclass ? navheaderclass : 'selected'} onClick={(e) => {toggleCurrent(e);}}>{contact}</h1></Link>
-                </div>
+                <h1 className='selected navheader' id={home} onClick={(e) => {toggleCurrent(e); scrollToTop();}}>{home.toLowerCase()}</h1>
+                <Link activeClass="active" to={about} spy={true} smooth={true} offset={0} duration={1000}><h1 className={navheaderclass ? navheaderclass : 'selected'} onClick={(e) => {toggleCurrent(e)}}>{about.toLowerCase()}</h1></Link>
+                <Link activeClass="active" spy={true} smooth={true} offset={0} duration={1000}><h1 className={navheaderclass ? navheaderclass : 'selected'} onClick={(e) => {toggleCurrent(e); scrollToBottom();}}>{contact.toLowerCase()}</h1></Link>
             </div>
         </header>
     )

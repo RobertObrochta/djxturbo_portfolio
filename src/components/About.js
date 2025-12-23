@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div className="pageSpace about-section" id="About">
+    <div className="about-section" id="About">
     </div>
   );
 

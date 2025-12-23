@@ -18,7 +18,7 @@ const Background = () => {
         return () => {
         window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [])
 
   return (
     <img id="BackgroundImage" className= {`${isScrolled ? 'parallax-bg-image-blur' : 'parallax-bg-image-noblur'} background-image`} src={console}/>
