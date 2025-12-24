@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+
 // eslint-disable-next-line
 import { Link, animateScroll as scroll, animateScroll } from "react-scroll";
 import Hamburger from './Hamburger';
 
 const Nav = () => {
+    const isMobile = window.innerWidth < 768;
     const [hamburgerOpen, setHamburgerOpen] =  useState(false);
     
     const home = "Home"
@@ -47,6 +49,7 @@ const Nav = () => {
         }
     `;
     
+    if (isMobile){
     return (
         <header className='nav wrapper'>
             <div className='fixed-wrapper'>
@@ -62,6 +65,20 @@ const Nav = () => {
             <style>{burgerMeatCSS}</style>
         </header>
     )
+    }
+    else{
+            return (
+        <header className='nav wrapper'>
+            <div className='fixed-wrapper'>
+                <h1 className='selected navheader' id={home} onClick={(e) => {toggleCurrent(e); scrollToTop();}}>{home.toLowerCase()}</h1>
+                <Link activeClass="active" to={about} spy={true} smooth={true} offset={0} duration={1000}><h1 className={navheaderclass ? navheaderclass : 'selected'} onClick={(e) => {toggleCurrent(e)}}>{about.toLowerCase()}</h1></Link>
+                <Link activeClass="active" spy={true} smooth={true} offset={0} duration={1000}><h1 className={navheaderclass ? navheaderclass : 'selected'} onClick={(e) => {toggleCurrent(e); scrollToBottom();}}>{contact.toLowerCase()}</h1></Link>
+            </div>
+        </header>
+    )
+
+    }
+
 }
 
 export default Nav;
