@@ -7,15 +7,19 @@ import Blurb from './components/Blurb';
 import About from './components/About';
 import Contact from './components/Contact';
 import Background from './components/Background';
+import NavBackground from './components/NavBackground';
 
 
 const App = () => {
+  const isMobile = window.innerWidth < 768;
+  const [hamburgerOpen, setHamburgerOpen] =  useState(false);
 
   return (
     <div className="container">
+        <NavBackground hamburgerOpen={hamburgerOpen} isMobile={isMobile}/>
         <Header/>
         <Background/>
-        <Nav/>
+        <Nav hamburgerOpen={hamburgerOpen} setHamburgerOpen={setHamburgerOpen} isMobile={isMobile}/>
         <div className="griddy">
           <Blurb/>
           <About/>
