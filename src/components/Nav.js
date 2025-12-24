@@ -27,7 +27,6 @@ const Nav = () => {
 
     function toggleHamburgerOpen(e) {
         setHamburgerOpen(!hamburgerOpen);
-
         // TODO disable and configure background
     }
 
