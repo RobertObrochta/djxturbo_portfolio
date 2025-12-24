@@ -330,8 +330,8 @@ h3 {
 }
 
 .background-image{
-  max-width: 120%;
-  height:auto;
+  width: auto;
+  height:100%;
   position: fixed;
   background-size: cover;
   z-index: -1;
