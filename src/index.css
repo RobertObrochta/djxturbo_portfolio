@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap');
+@import '@splidejs/react-splide/css';
 
 * {
   margin: 0;
@@ -109,6 +110,7 @@
     align-items: center;
     z-index: 1;
     position: relative;
+    margin-left:1.5%;
   }
 
   /* Nav */
@@ -146,9 +148,8 @@
   }
 
   .wrapper {
-    width: 100%;
     position: fixed;
-    text-align: right;
+    left:88%;
   }
 
   .fixed-wrapper {
@@ -260,12 +261,28 @@
   resize: none;
 }
 
+.videos{
+  position: absolute;
+  width: 50%;
+  left: 25%;
+}
+
+.videos button{
+  z-index: 10;
+}
+
+.videos iframe{
+  position: relative;
+  left: 8.5%;
+  z-index: 9;
+}
+
 /* Footer */
 footer {
   display: grid;
   position: fixed;
   bottom: 0;
-  left: 50%;
+  left: 49%;
   z-index: 999;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 5%;
